@@ -2,8 +2,8 @@
   --teal: #19A3BC;
   --orange: #F1751B;
   --dark: #1F272B;
-  --gray: #E4E8EB;
-  --offwhite: #F8FAFB;
+  --gray: #E3E7EA;
+  --offwhite: #F7F9FB;
 }
 
 * { box-sizing: border-box; scroll-behavior: smooth; }
@@ -15,101 +15,103 @@ body {
   background: white;
 }
 
-/* ---------- Header ---------- */
-.topbar {
-  border-bottom: 1px solid var(--gray);
-  background: white;
-}
-
-.wrap {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 1rem 1.25rem;
-}
-
-.logo {
-  font-weight: 800;
-  font-size: 1.25rem;
-  color: var(--teal);
-}
-
-.topbar .wrap {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.crew-btn {
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  border: 1px solid var(--teal);
-  color: var(--teal);
-  font-weight: 600;
-}
-.crew-btn:hover { background: var(--teal); color: white; }
-
-/* ---------- Hero ---------- */
+/* ---------- HERO ---------- */
 .hero {
-  border-bottom: 1px solid var(--gray);
-  background: var(--offwhite);
-}
-
-.hero-content {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 3rem 1.25rem 1.5rem;
   text-align: center;
+  background: var(--offwhite);
+  border-bottom: 1px solid var(--gray);
 }
-
-.hero h1 { margin: 0 0 0.75rem; }
 
 .hero-image {
   width: 100%;
-  height: 340px;
+  height: 360px;
   background: #ccc center/cover no-repeat;
-  /* Replace this with your image path */
-  /* example: background-image: url("images/a320-hero.jpg"); */
+  /* replace with your hero image */
+  /* background-image: url("images/hero.jpg"); */
 }
 
-/* ---------- Sections ---------- */
-.block {
-  padding: 3rem 1.25rem;
+.hero-text {
+  padding: 2.5rem 1.25rem 2rem;
 }
 
-.block.alt {
-  background: var(--offwhite);
-  border-top: 1px solid var(--gray);
-  border-bottom: 1px solid var(--gray);
+.hero-text h1 { margin: 0 0 .75rem; }
+
+/* ---------- SPLIT SECTIONS ---------- */
+.section {
+  padding: 3.5rem 1.25rem;
 }
 
-h2 { margin-top: 0; color: var(--teal); }
-
-.text {
-  max-width: 780px;
+.split {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
 }
 
-.center {
+.split.reverse {
+  direction: rtl;
+}
+
+.split.reverse .content {
+  direction: ltr;
+}
+
+.image {
+  height: 260px;
+  border-radius: 14px;
+  background: #ccc center/cover no-repeat;
+}
+
+/* replace with your A320 image */
+.left-img {
+  /* background-image: url("images/a320-left.jpg"); */
+}
+
+/* replace with your Hawaii / scenery image */
+.right-img {
+  /* background-image: url("images/hawaii.jpg"); */
+}
+
+.content h2 {
+  color: var(--teal);
+  margin-top: 0;
+}
+
+.content p {
+  max-width: 520px;
+}
+
+/* ---------- FOOTER ---------- */
+.footer {
   text-align: center;
+  padding: 2.5rem 1.25rem 3rem;
+  border-top: 1px solid var(--gray);
+  background: var(--offwhite);
 }
 
-/* ---------- Buttons ---------- */
-.primary-btn {
+.crew-btn {
   display: inline-block;
   margin-top: 1rem;
-  padding: 0.75rem 1.5rem;
-  border-radius: 10px;
+  padding: 0.9rem 1.8rem;
+  border-radius: 12px;
   background: var(--orange);
   color: white;
   text-decoration: none;
   font-weight: 700;
 }
-.primary-btn:hover { opacity: .9; }
+.crew-btn:hover { opacity: .9; }
 
-/* ---------- Footer ---------- */
-.footer {
-  text-align: center;
-  padding: 2rem 1rem;
-  border-top: 1px solid var(--gray);
-  color: #555;
+/* ---------- MOBILE ---------- */
+@media (max-width: 780px) {
+  .split {
+    grid-template-columns: 1fr;
+  }
+
+  .split.reverse {
+    direction: ltr;
+  }
+
+  .image { height: 220px; }
 }
