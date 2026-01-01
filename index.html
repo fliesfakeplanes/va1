@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wiki Jet Virtual Airline</title>
+
+  <style>
+    :root {
+      --teal: #19A3BC;
+      --blue: #067DA2;
+      --orange: #F1751B;
+      --yellow: #FFC858;
+      --charcoal: #2A2F33;
+      --offwhite: #F7F9FB;
+      --gray: #DDE3E8;
+    }
+
+    * { box-sizing: border-box; scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      color: var(--charcoal);
+      background: white;
+    }
+
+    /* Header / Nav */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: white;
+      border-bottom: 1px solid var(--gray);
+    }
+
+    nav {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 1.25rem;
+    }
+
+    .brand {
+      font-weight: 800;
+      font-size: 1.25rem;
+      color: var(--teal);
+    }
+
+    .nav-links a {
+      margin-left: 1.1rem;
+      text-decoration: none;
+      color: var(--charcoal);
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: var(--teal);
+    }
+
+    /* Sections */
+    section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 4rem 1.25rem;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, var(--orange), var(--yellow), var(--teal), var(--blue));
+      color: white;
+      text-align: center;
+      padding: 6rem 1.25rem;
+    }
+
+    .hero h1 {
+      margin: 0 0 1rem;
+      font-size: 2.5rem;
+    }
+
+    h2 {
+      margin-top: 0;
+      color: var(--teal);
+    }
+
+    .cta-btn {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 0.75rem 1.25rem;
+      background: var(--orange);
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+    }
+
+    .cta-btn:hover { opacity: 0.9; }
+
+    .card-grid {
+      display: grid;
+      gap: 1.25rem;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+
+    .card {
+      background: var(--offwhite);
+      border: 1px solid var(--gray);
+      border-radius: 12px;
+      padding: 1.25rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      color: #555;
+      border-top: 1px solid var(--gray);
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <div class="brand">Wiki Jet</div>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#fleet">Fleet</a>
+      <a href="#network">Network</a>
+      <a href="#join">Join</a>
+      <a href="#crew">Crew Login</a>
+    </div>
+  </nav>
+</header>
+
+<section id="home" class="hero">
+  <h1>Welcome to Wiki Jet Virtual Airline</h1>
+  <p>Flying together across a global virtual network — professional, community-driven, and fun.</p>
+  <a class="cta-btn" href="#join">Get Started</a>
+</section>
+
+<section id="fleet">
+  <h2>Our Fleet</h2>
+  <p>Wiki Jet operates a modern, versatile fleet designed to support routes from regional hops to international services.</p>
+
+  <div class="card-grid">
+    <div class="card"><strong>A320 Family</strong><br />Efficient short & medium-haul operations.</div>
+    <div class="card"><strong>B737 Series</strong><br />Reliable performance across our core network.</div>
+    <div class="card"><strong>Widebody Ops</strong><br />Long-haul capability for expansion routes.</div>
+  </div>
+</section>
+
+<section id="network">
+  <h2>Route Network</h2>
+  <p>Our network spans hubs, regional focus cities, and event-based charter operations across the virtual skies.</p>
+
+  <div class="card-grid">
+    <div class="card"><strong>Main Hubs</strong><br />North America • Europe</div>
+    <div class="card"><strong>Focus Cities</strong><br />Seasonal + event-driven operations</div>
+    <div class="card"><strong>Online Networks</strong><br />Compatible with major flight sim platforms</div>
+  </div>
+</section>
+
+<section id="join">
+  <h2>Join Wiki Jet</h2>
+  <p>Whether you’re new to virtual aviation or an experienced pilot, we’d love to have you on board.</p>
+  <a class="cta-btn" href="#">Apply to Join</a>
+</section>
+
+<section id="crew">
+  <h2>Crew Login</h2>
+  <p>Pilot operations and resources portal (coming soon).</p>
+  <a class="cta-btn" href="#">Enter Crew Portal</a>
+</section>
+
+<footer>
+  © Wiki Jet Virtual Airline — For flight simulation use only
+</footer>
+
+</body>
+</html>
