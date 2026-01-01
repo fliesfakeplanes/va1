@@ -140,3 +140,9 @@ body {
     gap: 10px;
   }
 }
+
+.feature-image img {
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
