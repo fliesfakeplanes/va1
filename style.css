@@ -15,26 +15,60 @@ body {
   background: white;
 }
 
-/* ---------- HERO ---------- */
-.hero {
-  text-align: center;
-  background: var(--offwhite);
+/* ---------- TOP BAR WITH BUTTONS ---------- */
+.topbar {
   border-bottom: 1px solid var(--gray);
+  background: white;
 }
 
-.hero-image {
-  width: 100%;
-  height: 360px;
-  background: #ccc center/cover no-repeat;
-  /* replace with your hero image */
-  /* background-image: url("images/hero.jpg"); */
+.wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.25rem 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
-.hero-text {
-  padding: 2.5rem 1.25rem 2rem;
+.site-title {
+  margin: 0;
+  font-size: 1.6rem;
+  color: var(--teal);
 }
 
-.hero-text h1 { margin: 0 0 .75rem; }
+.menu-buttons {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.menu-btn {
+  text-decoration: none;
+  padding: 0.55rem 1.1rem;
+  border-radius: 10px;
+  font-weight: 600;
+  border: 1px solid transparent;
+}
+
+/* Discord = outline style */
+.menu-btn.secondary {
+  color: var(--teal);
+  border-color: var(--teal);
+}
+.menu-btn.secondary:hover {
+  background: var(--teal);
+  color: white;
+}
+
+/* Crew Login = filled CTA */
+.menu-btn.primary {
+  background: var(--orange);
+  color: white;
+}
+.menu-btn.primary:hover {
+  opacity: 0.9;
+}
 
 /* ---------- SPLIT SECTIONS ---------- */
 .section {
@@ -53,7 +87,6 @@ body {
 .split.reverse {
   direction: rtl;
 }
-
 .split.reverse .content {
   direction: ltr;
 }
@@ -64,12 +97,11 @@ body {
   background: #ccc center/cover no-repeat;
 }
 
-/* replace with your A320 image */
+/* replace these with real images */
 .left-img {
-  /* background-image: url("images/a320-left.jpg"); */
+  /* background-image: url("images/a320.jpg"); */
 }
 
-/* replace with your Hawaii / scenery image */
 .right-img {
   /* background-image: url("images/hawaii.jpg"); */
 }
