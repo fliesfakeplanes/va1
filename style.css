@@ -1,161 +1,115 @@
-/* ---------- Core Palette (Art Deco Inspired) ---------- */
 :root {
   --teal: #19A3BC;
-  --deep-teal: #0c5362;
-  --gold: #D9A441;
-  --dark: #1B1F23;
-  --cream: #F4EFE6;
-  --paper: #FFFFFF;
-  --gray: #D6D6D6;
+  --orange: #F1751B;
+  --dark: #1F272B;
+  --gray: #E4E8EB;
+  --offwhite: #F8FAFB;
 }
 
 * { box-sizing: border-box; scroll-behavior: smooth; }
 
 body {
   margin: 0;
-  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  background: var(--cream);
+  font-family: system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
   color: var(--dark);
+  background: white;
 }
 
-/* ---------- Navigation ---------- */
-.nav-bar {
-  background: var(--paper);
-  border-bottom: 2px solid var(--gold);
-  position: sticky;
-  top: 0;
-  z-index: 20;
+/* ---------- Header ---------- */
+.topbar {
+  border-bottom: 1px solid var(--gray);
+  background: white;
 }
 
-.nav-inner {
+.wrap {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 0.75rem 1.25rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  padding: 1rem 1.25rem;
 }
 
-.brand {
-  font-family: "Cinzel", serif;
+.logo {
   font-weight: 800;
-  letter-spacing: 1px;
+  font-size: 1.25rem;
   color: var(--teal);
-  font-size: 1.3rem;
 }
 
-nav a {
-  margin-left: 1.2rem;
+.topbar .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.crew-btn {
   text-decoration: none;
-  color: var(--dark);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--teal);
+  color: var(--teal);
   font-weight: 600;
 }
-nav a:hover { color: var(--teal); }
+.crew-btn:hover { background: var(--teal); color: white; }
 
 /* ---------- Hero ---------- */
 .hero {
-  text-align: center;
-  color: white;
-  padding: 6rem 1.25rem;
+  border-bottom: 1px solid var(--gray);
+  background: var(--offwhite);
 }
 
-.deco-bg {
-  background: linear-gradient(135deg, var(--gold), var(--teal), var(--deep-teal));
-}
-
-.hero-wrap { max-width: 900px; margin: 0 auto; }
-
-h1 {
-  font-family: "Cinzel", serif;
-  font-size: 3rem;
-  margin: 0 0 1rem;
-}
-
-.tagline { opacity: 0.9; font-size: 1.2rem; }
-
-/* ---------- Deco Divider ---------- */
-.divider {
-  text-align: center;
-  padding: 1rem 0;
-}
-
-.deco-line {
-  border-top: 3px solid var(--gold);
-  width: 160px;
+.hero-content {
+  max-width: 900px;
   margin: 0 auto;
+  padding: 3rem 1.25rem 1.5rem;
+  text-align: center;
+}
+
+.hero h1 { margin: 0 0 0.75rem; }
+
+.hero-image {
+  width: 100%;
+  height: 340px;
+  background: #ccc center/cover no-repeat;
+  /* Replace this with your image path */
+  /* example: background-image: url("images/a320-hero.jpg"); */
 }
 
 /* ---------- Sections ---------- */
-.panel {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 3.5rem 1.25rem;
+.block {
+  padding: 3rem 1.25rem;
 }
 
-.panel.alt {
-  background: var(--paper);
+.block.alt {
+  background: var(--offwhite);
   border-top: 1px solid var(--gray);
   border-bottom: 1px solid var(--gray);
 }
 
-.deco-title {
-  font-family: "Cinzel", serif;
-  color: var(--teal);
-  letter-spacing: 0.5px;
-  margin-top: 0;
+h2 { margin-top: 0; color: var(--teal); }
+
+.text {
+  max-width: 780px;
 }
 
-.lead {
-  max-width: 720px;
-  margin-bottom: 2rem;
-}
-
-/* ---------- Grid Cards ---------- */
-.grid {
-  display: grid;
-  gap: 1.25rem;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-}
-
-.card {
-  border: 2px solid var(--gold);
-  border-radius: 12px;
-  padding: 1.25rem;
-  background: var(--cream);
+.center {
+  text-align: center;
 }
 
 /* ---------- Buttons ---------- */
-.btn-primary,
-.btn-outline {
+.primary-btn {
   display: inline-block;
+  margin-top: 1rem;
   padding: 0.75rem 1.5rem;
   border-radius: 10px;
+  background: var(--orange);
+  color: white;
   text-decoration: none;
   font-weight: 700;
-  letter-spacing: 0.5px;
 }
-
-.btn-primary {
-  background: var(--teal);
-  color: white;
-}
-
-.btn-outline {
-  color: var(--teal);
-  border: 2px solid var(--teal);
-  background: transparent;
-}
-
-.btn-primary:hover,
-.btn-outline:hover {
-  opacity: 0.9;
-}
+.primary-btn:hover { opacity: .9; }
 
 /* ---------- Footer ---------- */
 .footer {
   text-align: center;
   padding: 2rem 1rem;
-  border-top: 2px solid var(--gold);
-  background: var(--paper);
+  border-top: 1px solid var(--gray);
   color: #555;
 }
