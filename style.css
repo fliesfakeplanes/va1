@@ -1,149 +1,142 @@
 :root {
-  --teal: #19A3BC;
-  --orange: #F1751B;
-  --dark: #1F272B;
-  --gray: #E3E7EA;
-  --offwhite: #F7F9FB;
+  --gray-bg: #f1f1f1;
+  --text-dark: #222;
+  --accent: #2a6ad8;
 }
 
-* { box-sizing: border-box; scroll-behavior: smooth; }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
 body {
-  margin: 0;
-  font-family: system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-  color: var(--dark);
-  background: white;
+  color: var(--text-dark);
+  background: #ffffff;
+  line-height: 1.6;
 }
 
-/* ---------- TOP BAR WITH BUTTONS ---------- */
-.topbar {
-  border-bottom: 1px solid var(--gray);
-  background: white;
-}
-
-.wrap {
+.container {
+  width: 90%;
   max-width: 1100px;
   margin: 0 auto;
-  padding: 1.25rem 1.25rem;
+}
+
+/* ------- Top Menu Bar ------- */
+
+.top-bar {
+  background: var(--gray-bg);
+  border-bottom: 1px solid #ddd;
+}
+
+.nav-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 1rem;
+  padding: 14px 0;
 }
 
 .site-title {
-  margin: 0;
-  font-size: 1.6rem;
-  color: var(--teal);
+  font-size: 1.4rem;
+  font-weight: 700;
 }
 
-.menu-buttons {
+.menu {
   display: flex;
-  gap: 0.6rem;
+  gap: 10px;
 }
 
 .menu-btn {
+  padding: 8px 14px;
+  border: 1px solid #ccc;
+  background: white;
   text-decoration: none;
-  padding: 0.55rem 1.1rem;
-  border-radius: 10px;
-  font-weight: 600;
-  border: 1px solid transparent;
+  color: #333;
+  border-radius: 6px;
+  transition: 0.2s;
 }
 
-/* Discord = outline style */
-.menu-btn.secondary {
-  color: var(--teal);
-  border-color: var(--teal);
-}
-.menu-btn.secondary:hover {
-  background: var(--teal);
-  color: white;
+.menu-btn:hover {
+  background: #f5f5f5;
 }
 
-/* Crew Login = filled CTA */
 .menu-btn.primary {
-  background: var(--orange);
+  border-color: var(--accent);
   color: white;
+  background: var(--accent);
 }
+
 .menu-btn.primary:hover {
   opacity: 0.9;
 }
 
-/* ---------- SPLIT SECTIONS ---------- */
-.section {
-  padding: 3.5rem 1.25rem;
-}
+/* ------- Feature Sections ------- */
 
-.split {
-  max-width: 1100px;
-  margin: 0 auto;
+.feature {
   display: grid;
-  gap: 2rem;
   grid-template-columns: 1fr 1fr;
+  gap: 30px;
   align-items: center;
+  padding: 50px 0;
 }
 
-.split.reverse {
+.feature.reverse {
+  grid-template-columns: 1fr 1fr;
   direction: rtl;
 }
-.split.reverse .content {
+
+.feature.reverse .feature-text {
   direction: ltr;
 }
 
-.image {
-  height: 260px;
-  border-radius: 14px;
-  background: #ccc center/cover no-repeat;
+.feature-image img {
+  width: 100%;
+  border-radius: 10px;
 }
 
-/* replace these with real images */
-.left-img {
-  /* background-image: url("images/a320.jpg"); */
+.feature-text h2 {
+  margin-bottom: 10px;
+  font-size: 1.6rem;
 }
 
-.right-img {
-  /* background-image: url("images/hawaii.jpg"); */
+.feature-text p {
+  max-width: 500px;
 }
 
-.content h2 {
-  color: var(--teal);
-  margin-top: 0;
-}
+/* ------- Footer ------- */
 
-.content p {
-  max-width: 520px;
-}
-
-/* ---------- FOOTER ---------- */
 .footer {
-  text-align: center;
-  padding: 2.5rem 1.25rem 3rem;
-  border-top: 1px solid var(--gray);
-  background: var(--offwhite);
+  background: var(--gray-bg);
+  padding: 30px 0;
+  margin-top: 40px;
 }
 
-.crew-btn {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.9rem 1.8rem;
-  border-radius: 12px;
-  background: var(--orange);
-  color: white;
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-btn {
+  padding: 10px 18px;
   text-decoration: none;
-  font-weight: 700;
+  background: var(--accent);
+  color: white;
+  border-radius: 6px;
 }
-.crew-btn:hover { opacity: .9; }
 
-/* ---------- MOBILE ---------- */
-@media (max-width: 780px) {
-  .split {
+/* ------- Responsive ------- */
+
+@media (max-width: 800px) {
+  .feature,
+  .feature.reverse {
     grid-template-columns: 1fr;
-  }
-
-  .split.reverse {
     direction: ltr;
   }
 
-  .image { height: 220px; }
+  .footer-content {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
